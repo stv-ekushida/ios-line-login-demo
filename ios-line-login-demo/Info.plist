@@ -37,7 +37,7 @@
 	<key>LineSDKConfig</key>
 	<dict>
 		<key>ChannelID</key>
-		<string>1521296333</string>
+        <string>{CHANNEL ID}</string>
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
