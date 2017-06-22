@@ -11,9 +11,8 @@ pod 'LineSDK', '~> 4.0.2'
 ```
 
 ### 3. Technical configurationで、Bundle IDとiOS Schemeを設定する
-iOS Schemeは、「line3rdp.<バンドルID>」とする<br>
+（注意）iOS Schemeは、「line3rdp.<バンドルID>」とする<br><br>
 例) 	line3rdp.jp.st-ventures.ios-line-login-demo
-
 
 ### 4. LINE SDKをダウンロードする
 [Download SDK](https://developers.line.me/ba/download/sdk/u3e6301863cbc63e50a752d9ed11f07ae)
