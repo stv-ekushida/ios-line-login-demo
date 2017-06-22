@@ -27,28 +27,20 @@
 			</array>
 		</dict>
 	</array>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>lineauth</string>
-        <string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-    </array>
-
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>lineauth</string>
+		<string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-
-    <key>LineSDKConfig</key>
-    <dict>
-        <key>ChannelID</key>
-        <string>{CHANNEL ID}</string>
-    </dict>
-
+	<key>LineSDKConfig</key>
+	<dict>
+		<key>ChannelID</key>
+		<string>1521296333</string>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

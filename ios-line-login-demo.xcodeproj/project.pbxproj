@@ -16,6 +16,8 @@
 		790B3E541EFB44C800970958 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790B3E531EFB44C800970958 /* Security.framework */; };
 		790B3E561EFB44D000970958 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790B3E551EFB44D000970958 /* CoreTelephony.framework */; };
 		790B3E5C1EFB476B00970958 /* LineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790B3E5B1EFB476B00970958 /* LineSDK.framework */; };
+		790B3E631EFB722100970958 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B3E621EFB722100970958 /* DetailViewController.swift */; };
+		790B3E661EFB745000970958 /* UIStoryboard+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B3E651EFB745000970958 /* UIStoryboard+Ex.swift */; };
 		DD4DF86E47C94B726AA4E02F /* Pods_ios_line_login_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A214F2F03A89A126832E /* Pods_ios_line_login_demoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		790B3E5B1EFB476B00970958 /* LineSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LineSDK.framework; path = ../../Downloads/LineSDK/LineSDK.framework; sourceTree = "<group>"; };
 		790B3E5D1EFB480900970958 /* ios-line-login-demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-line-login-demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		790B3E611EFB4A0000970958 /* ios-line-login-demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-line-login-demo.entitlements"; sourceTree = "<group>"; };
+		790B3E621EFB722100970958 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		790B3E651EFB745000970958 /* UIStoryboard+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Ex.swift"; sourceTree = "<group>"; };
 		9141483E44B01140151B2717 /* Pods-ios-line-login-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-line-login-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-line-login-demo/Pods-ios-line-login-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D9AFF7BCB7AAD52B4AD4413A /* Pods_ios_line_login_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_line_login_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE49A214F2F03A89A126832E /* Pods_ios_line_login_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_line_login_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,11 +86,11 @@
 		790B3E1E1EFB448B00970958 = {
 			isa = PBXGroup;
 			children = (
-				790B3E291EFB448B00970958 /* ios-line-login-demo */,
-				790B3E3E1EFB448B00970958 /* ios-line-login-demoTests */,
-				790B3E281EFB448B00970958 /* Products */,
 				790B3E4E1EFB44BB00970958 /* Frameworks */,
 				D39EE16D5C5A0F4CA5566FC2 /* Pods */,
+				790B3E281EFB448B00970958 /* Products */,
+				790B3E291EFB448B00970958 /* ios-line-login-demo */,
+				790B3E3E1EFB448B00970958 /* ios-line-login-demoTests */,
 				790B3E5D1EFB480900970958 /* ios-line-login-demo-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
@@ -103,12 +107,9 @@
 		790B3E291EFB448B00970958 /* ios-line-login-demo */ = {
 			isa = PBXGroup;
 			children = (
-				790B3E611EFB4A0000970958 /* ios-line-login-demo.entitlements */,
-				790B3E2A1EFB448B00970958 /* AppDelegate.swift */,
-				790B3E2C1EFB448B00970958 /* ViewController.swift */,
-				790B3E2E1EFB448B00970958 /* Main.storyboard */,
-				790B3E311EFB448B00970958 /* Assets.xcassets */,
-				790B3E331EFB448B00970958 /* LaunchScreen.storyboard */,
+				790B3E641EFB728600970958 /* Controllers */,
+				790B3E681EFB761300970958 /* Extensions */,
+				790B3E671EFB760700970958 /* Others */,
 				790B3E361EFB448B00970958 /* Info.plist */,
 			);
 			path = "ios-line-login-demo";
@@ -117,8 +118,8 @@
 		790B3E3E1EFB448B00970958 /* ios-line-login-demoTests */ = {
 			isa = PBXGroup;
 			children = (
-				790B3E3F1EFB448B00970958 /* ios_line_login_demoTests.swift */,
 				790B3E411EFB448B00970958 /* Info.plist */,
+				790B3E3F1EFB448B00970958 /* ios_line_login_demoTests.swift */,
 			);
 			path = "ios-line-login-demoTests";
 			sourceTree = "<group>";
@@ -137,6 +138,38 @@
 				DE49A214F2F03A89A126832E /* Pods_ios_line_login_demoTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		790B3E641EFB728600970958 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				790B3E621EFB722100970958 /* DetailViewController.swift */,
+				790B3E2E1EFB448B00970958 /* Main.storyboard */,
+				790B3E2C1EFB448B00970958 /* ViewController.swift */,
+			);
+			name = Controllers;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		790B3E671EFB760700970958 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				790B3E2A1EFB448B00970958 /* AppDelegate.swift */,
+				790B3E311EFB448B00970958 /* Assets.xcassets */,
+				790B3E331EFB448B00970958 /* LaunchScreen.storyboard */,
+				790B3E611EFB4A0000970958 /* ios-line-login-demo.entitlements */,
+			);
+			name = Others;
+			path = Others;
+			sourceTree = "<group>";
+		};
+		790B3E681EFB761300970958 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				790B3E651EFB745000970958 /* UIStoryboard+Ex.swift */,
+			);
+			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D39EE16D5C5A0F4CA5566FC2 /* Pods */ = {
@@ -359,8 +392,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790B3E631EFB722100970958 /* DetailViewController.swift in Sources */,
 				790B3E2D1EFB448B00970958 /* ViewController.swift in Sources */,
 				790B3E2B1EFB448B00970958 /* AppDelegate.swift in Sources */,
+				790B3E661EFB745000970958 /* UIStoryboard+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +424,7 @@
 				790B3E2F1EFB448B00970958 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		790B3E331EFB448B00970958 /* LaunchScreen.storyboard */ = {
@@ -397,6 +433,7 @@
 				790B3E341EFB448B00970958 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

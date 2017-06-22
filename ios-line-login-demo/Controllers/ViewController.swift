@@ -33,16 +33,14 @@ extension ViewController: LineSDKLoginDelegate {
             return
         }
 
-        if let accessToken = credential?.accessToken {
-            print("accessToken : \(accessToken)")
-        }
+        let vc = UIStoryboard.viewController(storyboardName: "Main",
+                                             identifier: "DetailViewController") as! DetailViewController
+        vc.profile = profile
+        self.present(vc, animated: true, completion: nil)
 
-        print("display Name : \(profile?.displayName ?? "unwap display name")")
-        print("userID : \(profile?.userID ?? "unwap userID")")
-
-        if let pictureURL = profile?.pictureURL {
-            print("profile Picture URL : \(pictureURL)")
-        }
+//        if let accessToken = credential?.accessToken {
+//            print("accessToken : \(accessToken)")
+//        }
     }
 }
 
