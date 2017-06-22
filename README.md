@@ -104,5 +104,23 @@ extension ViewController: LineSDKLoginDelegate {
 }
 ```
 
+## ログアウト
+
+```swift:DetailViewController.swift
+        let apiClient = LineSDKAPI(configuration: LineSDKConfiguration.defaultConfig())
+
+        apiClient.logout(queue: .main) { (success, error) in
+
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+                return
+            }
+
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+```
+
 ## マニュアル
 [公式マニュアルはこちら](https://developers.line.me/ios/development-with-sdk-v2)
